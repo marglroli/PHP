@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu_HU">
+    <head>
+        <title>Új munkatárs felvitele</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="felvitel.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Új munkatárs felvitele</h1>
+        <form action="munkatarsak.php" enctype="multipart/form-data" method="POST">
+            <fieldset>
+                <legend>Kötelező adatok</legend>
+                <div>
+                    <label for="nev">Név:</label>
+                    <input name="nev" id="nev" required="required" />
+                </div>
+                <div>
+                    <label for="nagy">Nagy felbontású fotó:</label>
+                    <input type="file" accept="image/*" name="nagy" id="nagy" required="required" />
+                </div>
+                <div>
+                    <label for="kicsi">Kis felbontású fotó:</label>
+                    <input type="file" accept="image/*" name="kicsi" id="kicsi" required="required" />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Opcionális adatok</legend>
+                <div>
+                    <label for="beosztas">Beosztás:</label>
+                    <input name="beosztas" id="beosztas" />
+                </div>
+                <div>
+                    <label for="szoba">Szobaszám:</label>
+                    <input name="szoba" id="szoba" />
+                </div>
+                <div>
+                    <label for="email">E-mail cím:</label>
+                    <input type="email" name="email" id="email" />
+                </div>
+                <div>
+                    <label for="tel">Telefonszám:</label>
+                    <input type="tel" name="tel" id="tel" />
+                </div>
+                <div>
+                    <label for="fax">Fax:</label>
+                    <input type="tel" name="fax" id="fax" />
+                </div>
+            </fieldset>
+            <input type="submit" name="mentes" value="Mentés" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2019.02.15., 11:26:17
+    Author     : hatwagner
+*/
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+td, th {
+    font-size: 6pt;
+    border: 1px solid gray;
+    width: 0.5cm;
+    height: 0.5cm;
+}
+
+td.foglalt {
+    background-color: red;
+}
+
+td.szabad {
+    background-color: green;
+}

@@ -1,0 +1,53 @@
+.munkatars {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.fent {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    margin-bottom: 10px;
+}
+
+.lent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lent div {
+    margin: 0px 10px 10px 0px;
+}
+
+.bal {
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.jobb {
+    flex-grow: 4;
+}
+
+.bal img {
+    width: 100%;
+}
+
+.adatok {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.adatok td {
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+.adatok td:nth-of-type(1) {
+    font-weight: bold;
+    width: 25%;
+}
+
+.adatok tr:nth-of-type(odd) {
+    background-color: lightgray;
+}

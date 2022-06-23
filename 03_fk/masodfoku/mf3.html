@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+  <head>
+    <title>Másodfokú egyenlet</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <form id="urlap" action="#">
+      <fieldset>
+        <legend>Adja meg a másodfokú egyenlet (<var>ax</var><sup>2</sup>+<var>bx</var>+<var>c</var>=0, ahol <var>a</var>&ne;0) együtthatóit!</legend>
+        <div><label>a=<input id="a" type="number" step="any" required="required" /></label></div>
+        <div><label>b=<input id="b" type="number" step="any" required="required" /></label></div>
+        <div><label>c=<input id="c" type="number" step="any" required="required" /></label></div>
+        <div><input type="submit" value="Számolás" /></div>
+      </fieldset>
+    </form>
+    <p id="eredmeny"></p>
+    <script>
+window.addEventListener("load", function() {
+  let a = document.getElementById("a");
+  let b = document.getElementById("b");
+  let c = document.getElementById("c");
+  let eredmeny = document.getElementById("eredmeny");
+  
+  
+  let xhr = new XMLHttpRequest();
+  xhr.addEventListener("load", function() {
+    eredmeny.innerHTML = xhr.responseText;
+  });
+  xhr.addEventListener("error", function() {
+    eredmeny.innerHTML = xhr.statusText;
+  });
+  
+  document.getElementById("urlap").addEventListener("submit", function(e) {
+    let va = encodeURIComponent(a.value);
+    let vb = encodeURIComponent(b.value);
+    let vc = encodeURIComponent(c.value);
+    xhr.open("get", "http://xenia.sze.hu/~wajzy/fk/masodfoku/mf3.php?a=" +
+      va + "&b=" + vb + "&c=" + vc);
+    xhr.send(null);
+    e.preventDefault();
+  });
+});
+    </script>
+  </body>
+</html>

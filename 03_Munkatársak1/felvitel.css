@@ -1,0 +1,22 @@
+label {
+    display: inline-block;
+    width: 180px;
+}
+
+input {
+    box-sizing: border-box;
+    width: 300px;
+}
+
+input[type="submit"] {
+    width: 180px;
+    margin-left: 15px;
+}
+
+fieldset {
+    margin-bottom: 10px;
+}
+
+body {
+    max-width: 520px;
+}
